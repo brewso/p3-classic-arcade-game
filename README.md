@@ -4,15 +4,16 @@ frontend-nanodegree-arcade-game
 
 In order to play the game open index.html in your favorite browser!
 
-Use the arrow keys _______
-To move up,down,  |       |
-left, and right	  |  /|\  |
+Use the arrow keys To move up,down, left, and right 
+                   _______
+               	  |       |
+                  |  /|\  |
 			______|___|___|______
 		   |      |   |   |      |
 		   |  <---|  \|/  |--->  |
 		   |______|_______|______|
 		   
-The goal of the game is to cross the road as many times as possible!
+The goal of the game is to cross the road as many times as possible without dying!
 
 
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
