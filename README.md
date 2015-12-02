@@ -5,7 +5,7 @@ frontend-nanodegree-arcade-game
 In order to play the game open index.html in your favorite browser!
 
 Use the arrow keys To move up,down, left, and right 
-                   _______
+                   _______ 
                	  |       |
                   |  /|\  |
 			______|___|___|______
