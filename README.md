@@ -2,18 +2,11 @@ frontend-nanodegree-arcade-game
 ===============================
 
 
-In order to play the game open index.html in your favorite browser!
+In order to play the game open index.html or click: http://brewso.github.io/p3-classic-arcade-game/ in your favorite browser!    
 
-Use the arrow keys To move up,down, left, and right 
-                   _______
-               	  |       |
-                  |  /|\  |
-			______|___|___|______
-		   |      |   |   |      |
-		   |  <---|  \|/  |--->  |
-		   |______|_______|______|
+Use the arrow keys To move up,down, left, and right  
 		   
-The goal of the game is to cross the road as many times as possible without dying!
+The goal of the game is to cross the road as many times as possible without dying!   
 
 
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
