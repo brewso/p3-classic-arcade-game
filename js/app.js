@@ -7,8 +7,8 @@ var Enemy = function(x, y) {
     "use strict";
     this.sprite = 'images/enemy-bug.png';
     //x and y coordinates and movement speed
-    this.x = x;
-    this.y = y;
+    this.x = -2;
+    this.y = randomPlace(5,1);
     this.speed = Math.floor((Math.random() * 200) + 100);
 };
 
@@ -17,7 +17,6 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 var allEnemies = [];
-//var row = new randomRow();
 
 function randomPlace(x, y) {
     "use strict";
@@ -42,7 +41,7 @@ function randomPlace(x, y) {
     //randomly generating enemies
     "use strict";
     for (var e = 0; e < 8; e += 1) {
-        allEnemies.push(new Enemy(-2, randomPlace(5, 1)));
+        allEnemies.push(new Enemy());
     }
 }());
 
@@ -97,29 +96,13 @@ Player.prototype.render = function() {
 //Reset player to beginning position
 Player.prototype.reset = function() {
     "use strict";
-    player.x = 303;
-    player.y = 377;
+    this.x = 303;
+    this.y = 377;
 };
 
 
 //Update player position
 Player.prototype.update = function() {
-    //if left key is pressed and player is not on edge of map, pressed decrement x
-    "use strict";
-    if (this.ctlKey === 'left' && this.x > 0) {
-        this.x = this.x - 101;
-        //if right key is pressed and player is not on edge of map increment x 
-    } else if (this.ctlKey === 'right' && this.x != 700) {
-        this.x = this.x + 101;
-        //if up key is pressed increment y 
-    } else if (this.ctlKey === 'up') {
-        this.y = this.y - 83;
-        //if down key is pressed and player is not on edge of map decrement y 
-    } else if (this.ctlKey === 'down' && this.y != 377) {
-        this.y = this.y + 83;
-    }
-    this.ctlKey = null;
-
     //If on water, reset
     if (this.y < 10) {
         this.reset();
@@ -135,6 +118,22 @@ Player.prototype.update = function() {
 Player.prototype.handleInput = function(e) {
     "use strict";
     this.ctlKey = e;
+	    //if left key is pressed and player is not on edge of map, pressed decrement x
+    "use strict";
+    if (this.ctlKey === 'left' && this.x > 0) {
+        this.x = this.x - 101;
+        //if right key is pressed and player is not on edge of map increment x 
+    } else if (this.ctlKey === 'right' && this.x != 700) {
+        this.x = this.x + 101;
+        //if up key is pressed increment y 
+    } else if (this.ctlKey === 'up') {
+        this.y = this.y - 83;
+        //if down key is pressed and player is not on edge of map decrement y 
+    } else if (this.ctlKey === 'down' && this.y != 377) {
+        this.y = this.y + 83;
+    }
+    this.ctlKey = null;
+
 };
 
 
